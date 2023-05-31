@@ -106,6 +106,7 @@ class Collection implements CollectionInterface
      * @return mixed The key's value, or the default value
      * @noinspection PhpParameterNameChangedDuringInheritanceInspection
      */
+    #[\ReturnTypeWillChange]
     public function offsetGet($key)
     {
         return $this->get($key);
@@ -126,6 +127,7 @@ class Collection implements CollectionInterface
      * @param mixed $value The data value
      * @noinspection PhpParameterNameChangedDuringInheritanceInspection
      */
+    #[\ReturnTypeWillChange]
     public function offsetSet($key, $value)
     {
         $this->set($key, $value);
@@ -137,6 +139,7 @@ class Collection implements CollectionInterface
      * @param string $key The data key
      * @noinspection PhpParameterNameChangedDuringInheritanceInspection
      */
+    #[\ReturnTypeWillChange]
     public function offsetUnset($key)
     {
         $this->remove($key);

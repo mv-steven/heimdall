@@ -17,7 +17,7 @@ class HeimdallRequest extends Request
         $username = null;
         $password = null;
         $uri = $request->uri->showPassword(true);
-        if (strpos($uri->getUserInfo(), ':')) {
+        if (strpos($uri->getUserInfo() ?? '', ':')) {
             $userInfo = explode(':', $uri->getUserInfo());
             $username = $userInfo[0];
             $password = $userInfo[1];

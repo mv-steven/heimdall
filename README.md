@@ -1,41 +1,51 @@
-<p align="center"><a href="https://heimdall.ezralazuardy.com" target="_blank" rel="noopener noreferrer"><img width="500" src="https://heimdall.ezralazuardy.com/img/heimdall.png" alt="Heimdall"></a></p>
+## Heimdall OAuth2 Server for CodeIgniter 4
 
-<br/>
+This is a fork of https://github.com/ezralazuardy/heimdall. That repo appears to have gone dead, and has some compatibility
+issues with php 8.1, so I'm trying to keep it current here.
+
+I'll minimally try to keep this current with the latest PHP version, but as I have time, I'll be working on the following:
+- Get the docs site up and running again
+- Publish example DB migrations for Token/Client/Scope/etc. repositories that the core oauth2 server requires
+- Controller examples for /token, /authorize, etc.
+- There are dependencies from the Slim framework that were copied over, I'd like to replace them with equivalent classes
+  that already exist in CI4.
+- Maybe some improvements to make it easier to grab more detailed info about an authenticated user & token
+
+---
 
 <p align="center">
 
-  <a href="https://www.codacy.com/gh/ezralazuardy/heimdall/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ezralazuardy/heimdall&amp;utm_campaign=Badge_Grade">
+  <a href="https://www.codacy.com/gh/mv-steven/heimdall/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mv-steven/heimdall&amp;utm_campaign=Badge_Grade">
     <img src="https://img.shields.io/codacy/grade/ff30d1e1cc494b1ca03462cd90f2e1f1" alt="Code Quality" target="_blank" rel="noopener noreferrer">
   </a>
 
-  <a href="https://codeclimate.com/github/ezralazuardy/heimdall">
-    <img src="https://img.shields.io/codeclimate/maintainability/ezralazuardy/heimdall" alt="Maintainability" target="_blank" rel="noopener noreferrer">
+  <a href="https://codeclimate.com/github/mv-steven/heimdall">
+    <img src="https://img.shields.io/codeclimate/maintainability/mv-steven/heimdall" alt="Maintainability" target="_blank" rel="noopener noreferrer">
   </a>
 
-  <a href="https://github.com/ezralazuardy/heimdall/actions/workflows/build.yml">
-    <img src="https://img.shields.io/github/workflow/status/ezralazuardy/heimdall/Build?label=build" alt="Build" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/mv-steven/heimdall/actions/workflows/build.yml">
+    <img src="https://img.shields.io/github/workflow/status/mv-steven/heimdall/Build?label=build" alt="Build" target="_blank" rel="noopener noreferrer">
   </a>
 
-  <a href="https://github.com/ezralazuardy/heimdall/actions/workflows/codacy-analysis.yml">
-    <img src="https://img.shields.io/github/workflow/status/ezralazuardy/heimdall/Codacy%20Security%20Scan?label=security" alt="Codacy Security Scan" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/mv-steven/heimdall/actions/workflows/codacy-analysis.yml">
+    <img src="https://img.shields.io/github/workflow/status/mv-steven/heimdall/Codacy%20Security%20Scan?label=security" alt="Codacy Security Scan" target="_blank" rel="noopener noreferrer">
   </a>
 
-  <a href="https://github.com/ezralazuardy/heimdall/releases">
-    <img src="https://img.shields.io/github/v/release/ezralazuardy/heimdall" alt="Releases" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/mv-steven/heimdall/releases">
+    <img src="https://img.shields.io/github/v/release/mv-steven/heimdall" alt="Releases" target="_blank" rel="noopener noreferrer">
   </a>
 
-  <a href="https://packagist.org/packages/ezralazuardy/heimdall">
-    <img src="https://img.shields.io/packagist/php-v/ezralazuardy/heimdall" alt="Minimum PHP version" target="_blank" rel="noopener noreferrer">
+  <a href="https://packagist.org/packages/mv-steven/heimdall">
+    <img src="https://img.shields.io/packagist/php-v/mv-steven/heimdall" alt="Minimum PHP version" target="_blank" rel="noopener noreferrer">
   </a>
 
-  <a href="https://github.com/ezralazuardy/heimdall/issues">
-    <img src="https://img.shields.io/github/issues/ezralazuardy/heimdall?color=red" alt="Issues" target="_blank" rel="noopener noreferrer">
+  <a href="https://github.com/mv-steven/heimdall/issues">
+    <img src="https://img.shields.io/github/issues/mv-steven/heimdall?color=red" alt="Issues" target="_blank" rel="noopener noreferrer">
   </a>
 
-  <a href="https://github.com/ezralazuardy/heimdall/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/ezralazuardy/heimdall" alt="License" target="_blank" rel="noopener noreferrer">
-  </a>
-</p>
+  <a href="https://github.com/mv-steven/heimdall/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/mv-steven/heimdall" alt="License" target="_blank" rel="noopener noreferrer">
+  </ </p>
 
 ---
 
@@ -50,7 +60,7 @@ This library was created in order to simplify the need of OAuth 2 implementation
 
 #### Latest version
 
-See the latest version of Heimdall [here](https://github.com/ezralazuardy/heimdall/releases).
+See the latest version of Heimdall [here](https://github.com/mv-steven/heimdall/releases).
 
 <br/>
 
@@ -61,7 +71,7 @@ In order to install Heimdall, you have to use [Composer](https://getcomposer.org
 In the root directory of your CodeIgniter 4 project, fire up a terminal and run:
 
 ```bash
-composer require ezralazuardy/heimdall
+composer require mv-steven/heimdall
 ```
 
 Heimdall is now ready to be configured and run in your server.
@@ -82,23 +92,23 @@ Read the Heimdall documentation [here](https://heimdall.ezralazuardy.com).
 
 ## 👷️ Contributing
 
-All contributions are welcomed. Please make a [pull request](https://github.com/ezralazuardy/heimdall/pulls) so that I can review your changes.
+All contributions are welcomed. Please make a [pull request](https://github.com/mv-steven/heimdall/pulls) so that I can review your changes.
 
-Before start making contributions to Heimdall, please read the [contribution guidelines](https://github.com/ezralazuardy/heimdall/blob/master/CONTRIBUTING.md) and [code of conduct](https://github.com/ezralazuardy/heimdall/blob/master/CODE_OF_CONDUCT.md).
+Before start making contributions to Heimdall, please read the [contribution guidelines](https://github.com/mv-steven/heimdall/blob/master/CONTRIBUTING.md) and [code of conduct](https://github.com/mv-steven/heimdall/blob/master/CODE_OF_CONDUCT.md).
 
 <br/>
 
 ## 🛡️ Security Policy
 
-Read the current Heimdall's security policy [here](https://github.com/ezralazuardy/heimdall/security/policy).
+Read the current Heimdall's security policy [here](https://github.com/mv-steven/heimdall/security/policy).
 
 <br/>
 
 ## 🗒️ Side Note
 
-Heimdall is at it's early stage. If you experiencing an error or bug, please report by creating a new [issues](https://github.com/ezralazuardy/heimdall/issues).
+Heimdall is at it's early stage. If you experiencing an error or bug, please report by creating a new [issues](https://github.com/mv-steven/heimdall/issues).
 
 <br/>
 
 ## 📜 License
-<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fezralazuardy%2Fheimdall?ref=badge_large" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fezralazuardy%2Fheimdall.svg?type=large"/></a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fmv-steven%2Fheimdall?ref=badge_large" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmv-steven%2Fheimdall.svg?type=large"/></a>
